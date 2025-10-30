@@ -1,16 +1,17 @@
 ```mermaid
 graph TB
   %% Core
-  LA[Linear Algebra]
+  LA["Linear Algebra"]
 
-  subgraph Core_Concepts
-    V[Vectors]
-    M[Matrices]
-    LM[Linear maps]
-    IP[Inner products]
-    EV[Eigenvalues & eigenvectors]
-    SVD[SVD / PCA]
-    SP[Sparse operations]
+  %% Core Concepts
+  subgraph "Core Concepts"
+    V["Vectors"]
+    M["Matrices"]
+    LM["Linear Maps"]
+    IP["Inner Products"]
+    EV["Eigenvalues & Eigenvectors"]
+    SVD["SVD / PCA"]
+    SP["Sparse Operations"]
   end
 
   LA --> V
@@ -22,17 +23,17 @@ graph TB
   LA --> SP
 
   %% Applications
-  subgraph Applications
-    ML[Machine Learning]
-    CV[Computer Vision]
-    CG[Computer Graphics]
-    NLP[Natural Language Processing]
-    SIG[Signal & Image Processing]
-    SYS[Systems & Algorithms]
-    OPT[Optimization]
-    ROB[Robotics & Control]
-    Q[Quantum Computing]
-    IR[Search/IR & Recommenders]
+  subgraph "Applications in Computer Science"
+    ML["Machine Learning"]
+    CV["Computer Vision"]
+    CG["Computer Graphics"]
+    NLP["Natural Language Processing"]
+    SIG["Signal & Image Processing"]
+    SYS["Algorithms & Systems"]
+    OPT["Optimization"]
+    ROB["Robotics & Control"]
+    QC["Quantum Computing"]
+    IR["Information Retrieval"]
   end
 
   V --> ML
@@ -45,25 +46,6 @@ graph TB
   IP --> NLP
   SVD --> SIG
   EV --> SIG
-  LM --> ROB
-  OPT --> ML
-  OPT --> ROB
-  EV --> Q
-  M --> Q
-  SVD --> IR
-
-  %% Concrete examples
-  subgraph Examples
-    ex1[Neural nets = matrix ops]
-    ex2[PCA for dimensionality]
-    ex3[3D transforms]
-    ex4[PageRank eigenvector]
-    ex5[JPEG compression]
-    ex6[Kalman filters]
-    ex7[Quantum state vectors]
-  end
-
-  ML --- ex1
-  ML --
+  L
 
 ```
